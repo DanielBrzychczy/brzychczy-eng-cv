@@ -265,6 +265,19 @@
         .experience p,
         .education p {
             margin: 5px 0 10px;
+            padding-left: 15px; /* Dodane wcięcie dla punktorów */
+            position: relative;
+        }
+
+        .experience p::before {
+            content: '\2022'; /* Punktor: bullet point */
+            position: absolute;
+            left: 0;
+            top: 0; /* Wyrównaj punktor do góry tekstu */
+        }
+
+        .education p {
+            margin: 5px 0 10px;
         }
 
         .sylabus {
@@ -344,8 +357,8 @@
         .left-column .qr-container {
             text-align: center;
             margin-bottom: 20px;
-            display: flex;          /* Added */
-            justify-content: center; /* Added */
+            display: flex;          /* Dodane */
+            justify-content: center; /* Dodane */
             align-items: center;
         }
 
@@ -505,8 +518,14 @@
             padding: 5px;
         }
 
+        .qr-container {
+            text-align: center; /* Wyśrodkowanie poziome */
+        }
+
         .qr-container img {
-            width: 150px; /* Smaller QR code size */
+            width: 150px; /* Zmniejszony rozmiar kodu QR */
+            display: block;
+            margin: 0 auto;
         }
 
     </style>
@@ -528,18 +547,18 @@
     <div class="container">
         <div class="left-column">
              <div class="english-cv-button-container">
-                <a href="cv_pl.html" class="english-cv-button">View in Polish</a>
+                <a href="https://danielbrzychczy.github.io/brzychczy-cv/" class="english-cv-button">View in Polish</a>
             </div>
             <div class="about-me">
                 <h2 data-translate="about-me"> <i class="fas fa-user"></i> About Me </h2>
                 <p data-translate="about-me-text">
-                    I am a student of Industry 4.0 Technology with a passion for modern solutions. I am particularly interested in mechatronics and electronics, in which I am constantly developing – both through my studies and by pursuing personal projects. I am open to learning new skills and I am a quick learner, which allows me to efficiently adapt to new tasks. Even if I am unfamiliar with something, I quickly catch up to fully understand and effectively perform my duties. Outside of my studies, I love to travel and explore history – I believe it helps to better understand the world. In my free time, I relax by cycling and going to the gym.
+                    I am a student of Industry 4.0 Technology with a passion for modern solutions. I am particularly interested in mechatronics and electronics, in which I am constantly developing – both in my studies and through my own projects. I am open to new skills and learn quickly, which allows me to efficiently adapt to new tasks. Even if I am not yet familiar with something, I quickly catch up to fully understand and effectively perform my duties. Outside of my studies, I love to travel and explore history – I believe it helps me to better understand the world. In my free time, I relax by cycling and going to the gym.
                 </p>
             </div>
             <h2 style="border-bottom: 2px solid white;" data-translate="courses"><i class="fas fa-graduation-cap"></i> Courses and Training</h2>
             <ul>
                 <li>
-                    <strong>Vocational Education Center:</strong>
+                    <strong>Vocational Training Center:</strong>
                     <ul>
                         <li> Industrial Device Programming</li>
                     </ul>
@@ -550,7 +569,7 @@
                         <li> Design and Simulation of Stations in K-Rose</li>
                         <li> Wonderware InTouch 2014 R2</li>
                         <li> EPSON Robot Operation in RC+</li>
-                        <li> ELAU Servodrive Diagnostics - PacDrive M</li>
+                        <li> ELAU Servo Drive Diagnostics - PacDrive M</li>
                         <li> PLC Astraada One Controllers</li>
                         <li> Industry 4.0 - Foundation</li>
                     </ul>
@@ -577,7 +596,7 @@
                     <ul>
                         <li> Python programming</li>
                         <li> Data analysis</li>
-                        <li> PLC Programming</li>
+                        <li> PLC programming</li>
                         <li> Basic Roboguide operation</li>
                         <li> Basic SolidWorks operation</li>
                         <li> LABVIEW programming</li>
@@ -586,15 +605,15 @@
             </ul>
             <h2 style="border-bottom: 2px solid white;" data-translate="achievements"><i class="fas fa-trophy"></i> Achievements</h2>
             <ul>
-                <li> Laureate of the Lesser Poland competition for technical works</li>
+                <li> Laureate of the Małopolska competition for technical works</li>
                 <li> Driving license category B</li>
-                <li> Sanitary and epidemiological clearances</li>
-                <li> Forklift license</li>
+                <li> Sanitary and epidemiological examinations</li>
+                <li> Forklift operator license</li>
             </ul>
             <h2 style="border-bottom: 2px solid white;" data-translate="interests"><i class="fas fa-heart"></i> Interests</h2>
             <ul>
-                <li> Strength training</li>
-                <li> Cycling trips</li>
+                <li> Strength sports</li>
+                <li> Bicycle trips</li>
                 <li> History</li>
                 <li> Fantasy books</li>
                 <li> Strategy games</li>
@@ -607,9 +626,9 @@
             <div class="experience">
                 <h3 data-translate="revolmatic">Revolmatic Kraków / FrothStop Poland</h3>
                 <span class="date">July 2022 – November 2024</span>
-                <p data-translate="revolmatic-task1">Testing mechatronic systems</p>
-                <p data-translate="revolmatic-task2">Commissioning mechatronic systems</p>
-                <p data-translate="revolmatic-task3">Assembling mechatronic systems</p>
+                <p data-translate="revolmatic-task1">Testing of mechatronic systems</p>
+                <p data-translate="revolmatic-task2">Startup of mechatronic systems</p>
+                <p data-translate="revolmatic-task3">Assembly of mechatronic systems</p>
                 <p data-translate="revolmatic-task4">Performing service work, including repairs, component replacements, and maintenance of mechatronic systems</p>
                 <p data-translate="revolmatic-task5">Performing precise electrical measurements to assess and monitor parameters</p>
                 <p data-translate="revolmatic-task6">Analyzing measurement results to ensure compliance with technical requirements</p>
@@ -619,21 +638,21 @@
                 <span class="date">May 2022 – July 2022</span>
                 <p data-translate="zbita-szybka-task1">Diagnosing and repairing malfunctions in Apple consumer electronics, including replacing damaged components, screens, and batteries</p>
                 <p data-translate="zbita-szybka-task2">Conducting performance and diagnostic tests to identify software and hardware issues</p>
-                <p data-translate="zbita-szybka-task3">Contacting clients to obtain information about malfunctions, discuss diagnoses, and present repair costs</p>
+                <p data-translate="zbita-szybka-task3">Contacting customers to obtain information about malfunctions, discuss diagnoses, and present repair costs</p>
             </div>
             <div class="experience">
                 <h3 data-translate="pils">PILS Kraków</h3>
                 <span class="date">June 2021 – September 2021</span>
-                <p data-translate="pils-task1">Professionally assembling automated gates and barriers according to technical guidelines</p>
+                <p data-translate="pils-task1">Professionally installing automated gates and barriers according to technical guidelines</p>
                 <p data-translate="pils-task2">Conducting comprehensive functionality tests, including assessing opening, closing, and motion detection capabilities</p>
                 <p data-translate="pils-task3">Performing regular service work, including diagnostics, repairs, and maintenance</p>
             </div>
             <div class="experience">
                 <h3 data-translate="bws">BWS Stagehands</h3>
                 <span class="date">July 2020 – September 2020</span>
-                <p data-translate="bws-task1">Experience in precisely assembling and disassembling stage structures according to design plans</p>
+                <p data-translate="bws-task1">Experience in the precise assembly and disassembly of stage structures according to project plans</p>
                 <p data-translate="bws-task2">Performing cleaning work to maintain cleanliness and order on stage before, during, and after events</p>
-                <p data-translate="bws-task3">Actively assisting in loading, unloading, and moving stage equipment</p>
+                <p data-translate="bws-task3">Actively assisting in loading, unloading, and transporting stage equipment</p>
             </div>
             <h2 data-translate="education"><i class="fas fa-university"></i> Education</h2>
             <div class="education">
@@ -644,9 +663,9 @@
             <div class="education">
                 <h3 data-translate="agh">AGH University of Science and Technology in Kraków</h3>
                 <span class="date">2022 – Present</span>
-                <p data-translate="agh-specialization">Specialization: <b>Industry 4.0 Technology Engineer</b>.</p>
+                <p data-translate="agh-specialization">Specialization: <b>Engineer of Industry 4.0 Technology</b>.</p>
             </div>
-            <h2 style="border-bottom: 2px solid #004d40; padding-bottom: 5px; margin-bottom: 20px; transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;" data-translate="sylabus-title"><i class="fas fa-file-alt"></i> Curriculum</h2>
+             <h2 style="border-bottom: 2px solid #004d40; padding-bottom: 5px; margin-bottom: 20px; transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;" data-translate="sylabus-title"><i class="fas fa-file-alt"></i> Teaching syllabus</h2>
             <div class="sylabus">
                 <div class="qr-container">
                     <a href="https://sylabusy.agh.edu.pl/pl/1/2/18/1/4/16/227" target="_blank">
@@ -672,7 +691,7 @@
             <table class="data-agreement-table">
                 <tr>
                     <td data-translate="data-agreement">
-                        I consent to the processing of personal data necessary for the recruitment process in accordance with:
+                        I consent to the processing of personal data necessary for the implementation of the recruitment process in accordance with:
                         Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of individuals with regard to the processing of personal data and on the free movement of such data and repealing Directive 95/46/EC (GDPR).
                     </td>
                 </tr>
